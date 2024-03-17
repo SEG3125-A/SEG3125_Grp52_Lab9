@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+import './CarReviews.css';
 
 const CarReviews = () => {
-
   const [reviews, setReviews] = useState([
     {
       id: 1,
@@ -19,17 +19,49 @@ const CarReviews = () => {
       id: 3,
       model: '2024 Grand Coupe',
       review: 'The 2024 Grand Coupe blends performance with elegance in a way that few can. Its driving dynamics and luxurious appointments impress.',
-      rating: '★★★★½',
+      rating: '★★★☆☆',
+    },
+
+    {
+      id: 4,
+      model: '2023 City Compact',
+      review: 'The 2023 City Compact is the perfect urban companion, offering efficiency and agility in a compact form factor.',
+      rating: '★★★★☆',
+    },
+    {
+      id: 5,
+      model: '2024 Future Truck',
+      review: 'The 2024 Future Truck redefines what to expect from a pickup, with unparalleled power and a suite of technological advancements.',
+      rating: '★★★★★',
     },
   ]);
 
+
+  const [newReview, setNewReview] = useState({
+    model: '',
+    review: '',
+    rating: '',
+  });
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setNewReview({ ...newReview, [name]: value });
+  };
+
+  const addReview = (e) => {
+    e.preventDefault(); 
+    const reviewWithId = { ...newReview, id: reviews.length + 1 };
+    setReviews([...reviews, reviewWithId]);
+    setNewReview({ model: '', review: '', rating: '' }); // Reset form
+  };
+
   return (
-    <div style={styles.container}>
+    <div className="container">
       <h1>Car Reviews</h1>
       {reviews.length > 0 ? (
-        <ul style={styles.reviewList}>
+        <ul className="reviewList">
           {reviews.map((review) => (
-            <li key={review.id} style={styles.reviewItem}>
+            <li key={review.id} className="reviewItem">
               <h2>{review.model}</h2>
               <p>{review.review}</p>
               <p>Rating: {review.rating}</p>
@@ -39,23 +71,40 @@ const CarReviews = () => {
       ) : (
         <p>No reviews available at the moment.</p>
       )}
+
+      {}
+      <form onSubmit={addReview} className="formStyle">
+        <h2>Add Your Review</h2>
+        <input
+          type="text"
+          name="model"
+          className="inputStyle"
+          value={newReview.model}
+          onChange={handleInputChange}
+          placeholder="Model"
+          required
+        />
+        <textarea
+          name="review"
+          className="textareaStyle"
+          value={newReview.review}
+          onChange={handleInputChange}
+          placeholder="Review"
+          required
+        />
+        <input
+          type="text"
+          name="rating"
+          className="inputStyle"
+          value={newReview.rating}
+          onChange={handleInputChange}
+          placeholder="Rating"
+          required
+        />
+        <button type="submit" className="buttonStyle">Submit Review</button>
+      </form>
     </div>
   );
-};
-
-const styles = {
-  container: {
-    padding: '20px',
-  },
-  reviewList: {
-    listStyleType: 'none',
-    padding: 0,
-  },
-  reviewItem: {
-    marginBottom: '20px',
-    borderBottom: '1px solid #ccc',
-    paddingBottom: '10px',
-  }
 };
 
 export default CarReviews;
