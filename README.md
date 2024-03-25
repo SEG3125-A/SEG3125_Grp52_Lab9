@@ -1,4 +1,4 @@
-# SEG3125_Lab8
+# SEG3125_Lab9
 
 - Open two terminals
 - First terminal run the node server. Do so by typing "node server.js"
