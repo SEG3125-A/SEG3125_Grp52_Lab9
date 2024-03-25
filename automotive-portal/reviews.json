@@ -1,0 +1,37 @@
+[
+  {
+    "model": "2024 Electrica Sedan",
+    "review": "The 2024 Electrica Sedan offers an impressive range, cutting-edge technology, and a luxurious interior. It sets a new standard for electric vehicles.",
+    "rating": "5",
+    "id": 1,
+    "timestamp": "2024-03-24T19:37:22.581Z"
+  },
+  {
+    "model": "2024 Mountain SUV",
+    "review": "Designed for adventure, the 2024 Mountain SUV combines rugged capability with comfort. It’s as at home on the trails as it is on city streets.",
+    "rating": "4",
+    "id": 2,
+    "timestamp": "2024-03-24T19:37:22.581Z"
+  },
+  {
+    "model": "2024 Grand Coupe",
+    "review": "The 2024 Grand Coupe blends performance with elegance in a way that few can. Its driving dynamics and luxurious appointments impress.",
+    "rating": "3.5",
+    "id": 3,
+    "timestamp": "2024-03-24T19:37:22.581Z"
+  },
+  {
+    "model": "2023 City Compact",
+    "review": "The 2023 City Compact is the perfect urban companion, offering efficiency and agility in a compact form factor.",
+    "rating": "4",
+    "id": 4,
+    "timestamp": "2024-03-24T19:37:22.581Z"
+  },
+  {
+    "model": "2024 Future Truck",
+    "review": "The 2024 Future Truck redefines what to expect from a pickup, with unparalleled power and a suite of technological advancements.",
+    "rating": "5",
+    "id": 5,
+    "timestamp": "2024-03-24T19:37:22.581Z"
+  }
+]

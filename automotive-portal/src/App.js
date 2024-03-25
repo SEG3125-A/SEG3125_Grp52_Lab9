@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import CarReviews from './pages/CarReviews';
 import AutomotiveNews from './pages/AutomotiveNews';
 import CommunityForum from './pages/CommunityForum';
+import TopicPosts from './pages/TopicPosts'; 
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Route path="/car-reviews" element={<CarReviews />} />
             <Route path="/automotive-news" element={<AutomotiveNews />} />
             <Route path="/community-forum" element={<CommunityForum />} />
+            <Route path="/topic/:topicId/posts" element={<TopicPosts />} /> {}
           </Routes>
         </main>
         <Footer />

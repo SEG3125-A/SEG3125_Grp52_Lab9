@@ -1,10 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Home.css';
+import leftImage from '../images/Lambo.jpg';
+import rightImage from '../images/Chevrolette.jpg';
 
 const Home = () => {
   return (
     <div className="container">
+      <img src={leftImage} alt="Left side illustration" className="sideImage left" style={{ width: '100%' }} />
       <h1 className="heading">Welcome to RevHeads</h1>
       <p className="introduction">
         Your ultimate destination for in-depth car reviews, the latest automotive news, and a vibrant community forum.
@@ -25,7 +28,8 @@ const Home = () => {
           <p>Join the discussion with fellow automotive enthusiasts. Share experiences, advice, and engage in discussions on various automotive topics.</p>
           <Link to="/community-forum" className="link">Visit the Forum</Link>
         </div>
-      </div>
+        <img src={rightImage} alt="Right side illustration" className="sideImage right" style={{ width: '100%', height: '50%'  }} />      
+        </div>
     </div>
   );
 };

@@ -19,8 +19,21 @@ const Header = () => {
           <li style={styles.navItemStyle}>
             <Link to="/community-forum" style={styles.navLinkStyle}>Community Forum</Link>
           </li>
+          {}
+          <li style={{ ...styles.navItemStyle, marginLeft: 'auto' }}>
+            <div id="google_translate_element"></div>
+          </li>
         </ul>
       </nav>
+      {}
+      <script dangerouslySetInnerHTML={{
+        __html: `
+          function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+          }
+        `
+      }}></script>
+      <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     </header>
   );
 };
@@ -48,6 +61,10 @@ const styles = {
   navLinkStyle: {
     color: '#fff',
     textDecoration: 'none',
+    background: 'none',
+    border: 'none',
+    cursor: 'pointer',
+    padding: 0,
   }
 };
 
